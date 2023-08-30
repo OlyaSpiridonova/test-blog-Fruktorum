@@ -1,28 +1,19 @@
-<template>
-  <footer class="footer">
-    <hr />
-    <div class="footer-block">
-      <div class="footer-block-about">
-        <logo />
-        <p class="footer-block-about-text">
-          Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения
-          и актуальные тенденции, раскрывая мир эстетики и креативности
-        </p>
-      </div>
-      <div class="footer-block-contact">
-        <p class="footer-block-contact-email">email</p>
-        <span>testblogsupport@gmail.com</span>
-        <div class="footer-block-contact-items">
-          <img src="@/assets/icons/facebook.svg" alt="facebook" />
-          <img src="@/assets/icons/vk.svg" alt="vk" />
-          <img src="@/assets/icons/insta.svg" alt="insta" />
-          <img src="@/assets/icons/tg.svg" alt="telegram" />
-        </div>
-      </div>
-    </div>
-
-    <subscribe-form-block />
-  </footer>
+<template lang="pug">
+footer(class="footer")
+  hr
+  .footer-block
+    .footer-block-about
+      logo
+      p(class="footer-block-about-text") Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности
+    .footer-block-contact
+      p(class="footer-block-contact-email") email
+      span testblogsupport@gmail.com
+      .footer-block-contact-items
+        img(src="@/assets/icons/facebook.svg" alt="facebook")
+        img(src="@/assets/icons/vk.svg" alt="vk" )
+        img(src="@/assets/icons/insta.svg" alt="insta" )
+        img(src="@/assets/icons/tg.svg" alt="telegram" )
+  subscribe-form-block
 </template>
 
 <script setup></script>

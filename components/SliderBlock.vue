@@ -1,15 +1,10 @@
-<template>
-  <div class="slider-block">
-    <carousel :items-to-show="1" v-model="currentSlide">
-      <slide v-for="slide in prop.data" :key="slide">
-        <img :src="slide" alt="slide" />
-      </slide>
-
-      <template #addons>
-        <navigation />
-      </template>
-    </carousel>
-  </div>
+<template lang="pug">
+.slider-block
+  carousel(:items-to-show="1" v-model="currentSlide")
+    slide(v-for="slide in prop.data" :key="slide")
+      img(:src="slide" alt="slide")
+    template(#addons)
+      Navigation
 </template>
 
 <script setup>

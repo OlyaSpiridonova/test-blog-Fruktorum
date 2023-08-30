@@ -1,19 +1,12 @@
-<template>
-  <div class="intro-block">
-    <div class="intro-block-img">
-      <img :src="data.image" alt="image" />
-    </div>
-    <div class="intro-block-descr">
-      <h1>{{ data.title }}</h1>
-      <div class="intro-block-descr-time">
-        {{ data.reading_time }} мин время чтения
-      </div>
-      <div class="intro-block-descr-views">
-        {{ data.views_count }} прочитали статью
-      </div>
-      <p>{{ data.short_description }}</p>
-    </div>
-  </div>
+<template lang="pug">
+.intro-block
+    .intro-block-img
+      img(:src="data.image" alt="image")
+    .intro-block-descr
+      h1 {{ data.title }}
+      .intro-block-descr-time {{ data.reading_time }} мин время чтения
+      .intro-block-descr-views {{ data.views_count }} прочитали статью
+      p {{ data.short_description }}
 </template>
 
 <script setup>

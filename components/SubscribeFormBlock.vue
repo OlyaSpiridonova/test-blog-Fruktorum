@@ -1,11 +1,9 @@
-<template>
-  <div class="subscribe-form">
-    <span>Подпишись на рассылку</span>
-    <form>
-      <base-input type-input="email" placeholder="Email" />
-      <base-button type="subscribe">Подписаться</base-button>
-    </form>
-  </div>
+<template lang="pug">
+.subscribe-form
+  span Подпишись на рассылку
+  form
+    base-input(type-input="email" placeholder="Email")
+    base-button(type="subscribe") Подписаться
 </template>
 
 <script setup>

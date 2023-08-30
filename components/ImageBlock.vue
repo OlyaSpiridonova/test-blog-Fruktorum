@@ -1,8 +1,7 @@
-<template>
-  <div class="image-block">
-    <img :src="data.src" />
-    <span> Опубликовано 20.08.2022,<br />Unsplash</span>
-  </div>
+<template lang="pug">
+.image-block
+  img(:src="data.src")
+  span Опубликовано 20.08.2022, Unsplash
 </template>
 
 <script setup>

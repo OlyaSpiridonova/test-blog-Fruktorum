@@ -1,14 +1,8 @@
-<template>
-  <NuxtLink
-    v-if="isLink"
-    class="base-button"
-    :class="['base-button-' + props.type]"
-    :to="to"
-    ><slot
-  /></NuxtLink>
-  <button v-else class="base-button" :class="['base-button-' + props.type]">
-    <slot />
-  </button>
+<template lang="pug">
+NuxtLink(v-if="isLink" class="base-button" :class="['base-button-' + props.type]" :to="to")
+  slot
+button(v-else class="base-button" :class="['base-button-' + props.type]")
+  slot
 </template>
 
 <script setup>

@@ -1,16 +1,12 @@
-<template>
-  <div class="article-block">
-    <h1 class="article-block-title">{{ data.title }}</h1>
-    <div class="article-block-list">
-      <div v-for="article in data.articles" class="article-block-list-item">
-        <img :src="article.image" class="article-block-list-item-image" />
-        <h2 class="article-block-list-item-title">{{ article.title }}</h2>
-        <div class="article-block-list-item-btn">
-          <base-button type="read" :to="article.link">Читать</base-button>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.article-block
+  .article-block-title {{ data.title }}
+  .article-block-list
+    .article-block-list-item(v-for="article in data.articles")
+      img(:src="article.image" class="article-block-list-item-image")
+      .article-block-list-item-title {{ article.title }}
+      .article-block-list-item-btn
+        base-button(type="read" :to="article.link") Читать
 </template>
 
 <script setup>

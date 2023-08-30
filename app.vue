@@ -1,13 +1,7 @@
-<template>
-  <NuxtLayout :name="default">
-    <section v-if="store.blocks" v-for="block in store.blocks.body">
-      <component
-        :is="Component(block.type)"
-        :id="block.id"
-        :data="block.data"
-      />
-    </section>
-  </NuxtLayout>
+<template lang="pug">
+NuxtLayout(:name="default")
+  section(v-if="store.blocks" v-for="block in store.blocks.body")
+    component(:is="Component(block.type)" :id="block.id" :data="block.data")
 </template>
 
 <script setup>

@@ -1,12 +1,9 @@
-<template>
-  <div class="header">
-    <Logo />
-  </div>
+<template lang="pug">
+.header
+  logo
 </template>
 
-<script setup>
-import Logo from "@/components/Logo";
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .header {

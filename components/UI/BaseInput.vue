@@ -1,5 +1,5 @@
-<template>
-  <input :type="props.typeInput" :placeholder="props.placeholder" />
+<template lang="pug">
+input(:type="props.typeInput" :placeholder="props.placeholder")
 </template>
 
 <script setup>

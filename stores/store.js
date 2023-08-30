@@ -8,10 +8,13 @@ export const useStore = defineStore("store", {
       const url = new URL(baseURL.public.apiBase);
       url.searchParams.append("path", pathname);
 
-      this.blocks = await fetch(url).then((response) => {
-        if (response.ok) return response.json();
-        else return null;
-      });
+      const response = await fetch(url);
+      const respData = await response.json();
+      if (!response.ok) {
+        const error = new Error(respData.message || "Failed to send request");
+        throw error;
+      }
+      this.blocks = respData;
     },
   },
 });

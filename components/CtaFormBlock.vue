@@ -1,16 +1,14 @@
-<template>
-  <div class="form-back">
-    <img src="@/assets/img/form-img.jpg" alt="form-img" />
-    <div class="form-back-block">
-      <h1 class="form-back-block-title">Стань участником проекта</h1>
-      <form>
-        <base-input type="text" placeholder="Имя" />
-        <base-input type="number" placeholder="Телефон" />
-        <base-input type="email" placeholder="Email" />
-        <base-button type="subscribe">Присоединиться</base-button>
-      </form>
-    </div>
-  </div>
+<template lang="pug">
+.form-back
+  img(src="@/assets/img/form-img.jpg" alt="form-img")
+  .form-back-block
+    h1(class="form-back-block-title") Стань участником проекта
+    form
+      base-input(type="text" placeholder="Имя")
+      base-input(type="number" placeholder="Телефон")
+      base-input(type="email" placeholder="Email")
+      base-button(type="subscribe") Присоединиться
+
 </template>
 
 <script setup>
